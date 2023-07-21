@@ -1,0 +1,181 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --main-bg-color: #e0e8ff;
+    --main-text-color: #7280a7;
+    --offer-section-color: #f5f7ff;
+    --proceed-btn-color: #3829e0;
+    --cancel-btn-active-color: #1f2f56;
+}
+
+
+body {
+    background-color: var(--main-bg-color);
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.summary-container {
+    margin: 71px auto;
+    width: 87%;
+    max-width: 340px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    background-image: url("./images/illustration-hero.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 0px 16px 40px -20px rgba(66,91,214,1);
+}
+
+.summary-content {
+    margin-top: 142px;
+    text-align: center;
+    padding: 20px;
+}
+
+.summary-content h2 {
+    margin-top: 30px;
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: #1f2f56;
+}
+
+.content-text {
+    margin: 16px;
+    font-size: .96rem;
+    line-height: 1.56rem;
+    color: var(--main-text-color);
+}
+
+/* #region offer */
+.offer-container {
+    display: flex;
+    margin: 24px 4px;
+    padding: 0 5px;
+    height: 80px;
+    justify-content: space-around;
+    background-color: var(--offer-section-color);
+    align-items: center;
+    border-radius: 16px;
+    font-size: .86rem;
+}
+
+.offer-item:nth-child(2) {
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    flex-basis: 40%;
+    text-align: left;
+}
+
+.plan-title {
+    color: #1e2843;
+    font-weight: 900;
+}
+
+.plan-price {
+    color: var(--main-text-color);
+}
+
+.offer-item a {
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.offer-item a:hover {
+    text-decoration: none;
+    opacity: 0.7;
+    font-weight: 900;    
+    cursor: pointer;
+}
+/* #endregion */
+
+/* #region buttons */
+.proceed-btn {
+    background-color: var(--proceed-btn-color);
+    padding: 16px 0;
+    border: none;
+    color: white;
+    font-size: .96rem;
+    font-weight: 700;
+    width: 97%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 42px -8px rgba(70,100,189,0.7);
+}
+
+.proceed-btn:hover {
+    background-color: rgba(56, 41, 224, 0.7);
+    cursor: pointer;
+}
+
+.cancel-order-block {
+    margin: 24px 0 12px;
+}
+
+.cancel-order-block a {
+    font-size: .96rem;
+    font-weight: 900;
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+.cancel-order-block a:hover {
+    color: var(--cancel-btn-active-color);
+    cursor: pointer;
+}
+/* #endregion */
+
+@media (min-width: 768px) {
+    html {
+        font-size: 17.6px;
+    }
+    
+    body {
+        background-image: url("./images/pattern-background-desktop.svg");
+    }
+
+    .summary-container {
+        margin: 102px auto;
+        max-width: 450px;
+    }
+
+    .summary-content h2 {
+        margin-top: 104px;
+        font-size: 1.6rem;
+    }
+
+    .content-text {
+        font-size: .94rem;
+    }
+
+    .offer-container {
+        margin: 24px 30px 40px;
+    }
+
+    .offer-item:nth-child(2) {
+        flex-basis: 47%;
+    }
+
+    .plan-title, .plan-price {
+        font-size: .95rem;
+    }
+
+    .proceed-btn {
+        width: 86%;
+        font-size: .88rem;
+    }
+
+    .cancel-order-block {
+        margin: 30px 0;
+    }
+
+    .cancel-order-block a {
+        font-size: .88rem;
+    }
+}
